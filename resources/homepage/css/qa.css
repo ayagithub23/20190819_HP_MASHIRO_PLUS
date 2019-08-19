@@ -1,0 +1,99 @@
+/* アコーディオン */
+dl {
+  margin: 0 auto 10px;
+  border: solid 2px #59cec8;
+  font-size: 150%;
+  font-weight: bold;
+  font-weight: 500;
+  background: #fff;
+  color:#002642;
+}
+
+.border {
+  border: solid 2px #59cec8;
+}
+
+dl dt {
+  position: relative;
+  cursor: pointer;
+  box-sizing: border-box;
+  display: inline-block;
+  width: 100%;
+  padding: 20px;
+}
+
+dl dt span {
+  padding: 10px 0 10px 55px;
+  background-image: url(../images/Q.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  text-indent: 1px;
+  display: inline-block;
+
+  width: 75%;
+}
+
+
+
+dl dt.ac:after {
+  content: "＋";
+  display: inline-block;
+  font-weight: 100;
+  font-size: 45px;
+  background-color: #59cec8;
+  color: #fff;
+  right: 2%;
+  position: absolute;
+  text-align: center;
+  bottom: 15%;
+  margin-left: auto;
+  height: 50px;
+  top: 50%;
+  line-height: 1;
+  transform: translateY(-50%);
+  width: 50px;
+  border-radius: 50%;
+}
+
+dl dt.ac.active {
+  color: #fff;
+  background: #59cec8;
+}
+
+dl dt.ac.active span {
+  background-image: url(../images/Q_w.png);
+  background-repeat: no-repeat;
+  /* text-indent: 60px; */
+}
+
+dl dt.ac.active:after {
+  content: "︿";
+  display: block;
+  position: absolute;
+  font-size: 35px;
+  background-color: #fff;
+  bottom: 16%;
+  font-weight: 530;
+  color: #59cec8;
+  right: 2%;
+  text-align: center;
+  height: 50px;
+  line-height: .9;
+  width: 50px;
+  border-radius: 50%;
+}
+
+dl dd {
+  display: none;
+  padding: 20px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+dd p {
+  padding: 10px 0 10px 55px;
+  background-image: url(../images/A.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  text-indent: 1px;
+}

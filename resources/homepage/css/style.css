@@ -1,0 +1,1990 @@
+@charset "UTF-8";
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+@import url("../../../../fonts.googleapis.com/earlyaccess/notosanstc.css");
+@import url("https://fonts.googleapis.com/css?family=Noto+Serif+TC&amp;display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: '';
+  content: none;
+}
+
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  width: 100%;
+}
+
+* {
+  font-family: 'Noto Sans TC', 'Microsoft JhengHei', sans-serif;
+}
+
+#wrap {
+  width: 100%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ------------------------------------ 
+    MENU CONTROL
+------------------------------------ */
+#menuControl {
+  display: none;
+}
+
+#menuControl:checked ~ .header nav {
+  right: 0%;
+}
+
+/* ------------------------------------ 
+    HEADER
+------------------------------------ */
+.header {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  z-index: 2;
+  height: 70px;
+  top: 0;
+  width: 100%;
+  background-color: #ABEFE7;
+  padding: 0 20px;
+  text-decoration: none;
+  position: fixed;
+}
+
+.header .fa {
+  font-size: 1.2em;
+}
+
+.header .menuHamburger {
+  width: 40px;
+  cursor: pointer;
+  height: 40px;
+  display: block;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.header .menuHamburger::before {
+  content: "";
+  position: absolute;
+  height: 5px;
+  width: 40px;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #002642;
+  margin: auto;
+  -webkit-box-shadow: 0 15px 0 #002642, 0 -15px 0 #002642;
+          box-shadow: 0 15px 0 #002642, 0 -15px 0 #002642;
+}
+
+.header .menuHamburger span {
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+  display: block;
+  overflow: hidden;
+}
+
+.header .logo {
+  display: block;
+  width: 200px;
+  height: 40px;
+  margin: 0;
+}
+
+.header .logo a img {
+  width: auto;
+  height: 70px;
+}
+
+.header nav {
+  width: 70%;
+  height: calc(100vh - 70px);
+  top: 70px;
+  position: fixed;
+  -webkit-transition: .5s;
+  transition: .5s;
+  background-color: #ABEFE7;
+  right: -100%;
+}
+
+.header nav a {
+  width: 100%;
+  line-height: 13vh;
+  font-weight: 500;
+  display: block;
+  text-align: center;
+  font-size: 150%;
+  color: #002642;
+}
+
+.header nav :nth-child(6) {
+  position: relative;
+}
+
+.header nav :nth-child(6) span {
+  width: 220px;
+  position: absolute;
+  line-height: 1.8;
+  font-size: 60%;
+  bottom: -20%;
+  left: 50%;
+  border-radius: 10px;
+  border: solid 1px #002642;
+  padding: 3px;
+  font-weight: 500;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  background-color: #fff;
+}
+
+.header nav :nth-child(6) span::before {
+  content: "";
+  position: absolute;
+  bottom: 31px;
+  right: 108px;
+  border-top: 20px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid #002642;
+  border-top: none;
+}
+
+.header nav :nth-child(6) span::after {
+  content: "";
+  position: absolute;
+  bottom: 28px;
+  right: 108px;
+  border-top: 20px solid transparent;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-bottom: 15px solid #fff;
+  border-top: none;
+}
+
+/* ------------------------------------ 
+    FOOTER
+------------------------------------ */
+.footer {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: #ABEFE7;
+  padding: 30px 20px 10px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.footer .footerLeft {
+  font-size: 1.5rem;
+  color: #002642;
+  margin-bottom: 20px;
+}
+
+.footer .footerLeft .logo {
+  font-weight: bold;
+}
+
+.footer .footerLeft .logo img {
+  width: 50%;
+  padding-right: 20px;
+  vertical-align: bottom;
+}
+
+.footer .footerRigth {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0 0 20px;
+}
+
+.footer .footerRigth ul {
+  width: 150px;
+  text-align: right;
+  font-size: 1.5rem;
+  font-weight: 300;
+  color: #002642;
+}
+
+.footer .footerRigth ul li {
+  text-align: left;
+}
+
+.footer .footerRigth ul li:first-child {
+  font-weight: 500;
+}
+
+.footer .footerRigth ul li a {
+  color: #002642;
+}
+
+/* ------------------------------------ 
+    MIN WIDTH 768 AND MAX WIDTH 1024
+------------------------------------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+  /* ------------------------------------ 
+        HEADER
+    ------------------------------------ */
+  .header nav :nth-child(5) span::before {
+    bottom: 27px;
+  }
+  .header nav :nth-child(5) span::after {
+    bottom: 24px;
+  }
+  .header nav a {
+    font-size: 125%;
+  }
+}
+
+/* ------------------------------------ 
+    MIN WIDTH 768
+------------------------------------ */
+@media (min-width: 768px) {
+  /* ------------------------------------ 
+        HEADER
+    ------------------------------------ */
+  .header {
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    padding: 0 50px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    -webkit-box-shadow: 1px 1px 15px -2px rgba(0, 0, 0, 0.29);
+            box-shadow: 1px 1px 15px -2px rgba(0, 0, 0, 0.29);
+  }
+  .header .menuHamburger {
+    display: none;
+  }
+  .header nav {
+    width: 800px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    right: 0;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    top: 0px;
+    height: auto;
+    position: unset;
+  }
+  .header nav a {
+    width: 20%;
+    line-height: 4;
+  }
+  /* ------------------------------------ 
+        FOOTER
+    ------------------------------------ */
+  .footer {
+    padding: 50px 50px 10px;
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+    -webkit-box-orient: unset;
+    -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+            flex-direction: unset;
+  }
+  .footer .footerRigth ul li {
+    text-align: center;
+  }
+}
+
+/* ------------------------------------ 
+    MAIN
+------------------------------------ */
+.main {
+  margin: 200px auto;
+  /* GRIDE WIDTH
+------------------------------------ */
+  /* H1 H2 ELEMENT TEXT
+------------------------------------ */
+  /* INDEX PAGE - MAIN HEADER
+------------------------------------ */
+  /* ALL PAGE - MAIN CONTENT
+------------------------------------ */
+}
+
+.main .indexGridWidth {
+  max-width: 1200px;
+  margin: auto;
+  width: 80%;
+  padding: 100px 0 0;
+}
+
+.main .elementGridWidth {
+  max-width: 900px;
+  margin: auto;
+  width: 90%;
+  padding: 100px 0 100px;
+}
+
+.main .productGridWidth {
+  max-width: 1000px;
+  margin: auto;
+  width: 90%;
+  padding: 0 0 100px;
+}
+
+.main .experienceGridWidth {
+  max-width: 1000px;
+  margin: auto;
+  width: 90%;
+  padding: 0 0 100px;
+}
+
+.main .buyGridWidth {
+  max-width: 900px;
+  margin: auto;
+  width: 90%;
+  padding: 10% 0 0;
+}
+
+.main .privacyGridWidth {
+  max-width: 1000px;
+  margin: auto;
+  width: 90%;
+  padding: 5% 0 0;
+}
+
+.main .teikiGridWidth {
+  max-width: 800px;
+  margin: auto;
+  width: 90%;
+  padding: 5% 0 0;
+}
+
+.main h1.elementText,
+.main h2.elementText {
+  display: block;
+  margin: auto;
+  border: solid 3px #59CEC8;
+  text-align: center;
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', sans-serif;
+  letter-spacing: 6px;
+  font-size: 2rem;
+  font-weight: bold;
+  color: #002642;
+  position: relative;
+  margin-bottom: 60px;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main h1.elementText::before,
+.main h2.elementText::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 8px;
+  border: solid 3px #59CEC8;
+  height: 8px;
+  left: 10px;
+  border-radius: 50px;
+}
+
+.main h1.elementText::after,
+.main h2.elementText::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 8px;
+  border: solid 3px #59CEC8;
+  height: 8px;
+  right: 10px;
+  border-radius: 50px;
+}
+
+.main .mainHeaderBg {
+  overflow: hidden;
+  display: block;
+  margin-top: -100px;
+}
+
+.main .mainHeaderBg .mainHeader {
+  background-image: url("../images/fv_bg.jpg");
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .mainHeaderBg .mainHeader .mainHeaderLeft {
+  padding-right: 10px;
+  z-index: 1;
+}
+
+.main .mainHeaderBg .mainHeader .mainHeaderRight {
+  position: relative;
+}
+
+.main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightLogo {
+  width: 50%;
+}
+
+.main .mainHeaderBg .mainHeader .mainHeaderRight h1.mainHeaderRightH1 {
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', sans-serif;
+  font-weight: bold;
+  color: #002642;
+  margin: 10px auto;
+  font-weight: 600;
+}
+
+.main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightText {
+  font-family: 'Noto Serif TC', 'Microsoft JhengHei', sans-serif;
+  color: #002642;
+  background: #fff;
+  left: -30%;
+  padding-left: 30%;
+  width: 500%;
+  position: absolute;
+  font-weight: 600;
+}
+
+.main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightMore {
+  background-color: #59CEC8;
+  display: block;
+  margin-right: auto;
+  font-size: 1.5rem;
+  cursor: pointer;
+  -webkit-box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.29);
+  letter-spacing: 8px;
+  text-align: center;
+  color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightMore:hover {
+  -webkit-filter: saturate(200%);
+          filter: saturate(200%);
+}
+
+.main .mainContent {
+  width: 100%;
+  /* ./ INDEX PAGE - INDEX */
+  /* ./ INDEX PAGE - OFFER */
+  /* ./ INDEX PAGE - KOL */
+  /* ./ ELEMENT PAGE - BANNER */
+  /* ./ ELEMENT PAGE - ELENENT */
+  /* ./ ELEMENT PAGE - PRODUCT */
+  /* ./ ELEMENT PAGE - TV */
+  /* ./ EXPERIENCE PAGE - EXP */
+  /* ./ EXPERIENCE PAGE - MD */
+  /* ./ EXPERIENCE PAGE - QA */
+  /* ./ BUY PAGE - TABLE */
+  /* ./ BUY PAGE - PRIVACY */
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexTop {
+  width: 80%;
+  line-height: 2;
+  display: block;
+  margin: auto;
+  padding: 30px 30px;
+  border: solid 3px #59CEC8;
+  text-align: center;
+  -webkit-box-shadow: 16px 15px 1px -2px #ABEFE7;
+          box-shadow: 16px 15px 1px -2px #ABEFE7;
+  font-weight: 500;
+  color: #002642;
+  position: relative;
+  margin-bottom: 60px;
+  font-size: 1.2rem;
+  -webkit-transition: .5s;
+  transition: .5s;
+  position: relative;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexTop::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 8px;
+  border: solid 3px #59CEC8;
+  height: 8px;
+  left: 10px;
+  border-radius: 50px;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexTop::after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  width: 8px;
+  border: solid 3px #59CEC8;
+  height: 8px;
+  right: 10px;
+  border-radius: 50px;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexTop .mainContentIndexTopText1 {
+  font-size: 1.5rem;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexTop .mainContentIndexTopText2 {
+  font-size: 1.5rem;
+  color: #59cec8;
+  position: relative;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexTop .mainContentIndexTopText2::after {
+  content: "";
+  z-index: -1;
+  position: absolute;
+  width: 110%;
+  height: 30px;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%) rotate(-10deg);
+  transform: translate(-50%, -50%) rotate(-3deg);
+  background-color: #FFF9D5;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li {
+  border: solid 3px #59CEC8;
+  width: 100%;
+  position: relative;
+  color: #002642;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  width: 8px;
+  border: solid 3px #59CEC8;
+  height: 8px;
+  right: 10px;
+  border-radius: 50px;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li::after {
+  content: "";
+  position: absolute;
+  bottom: -25px;
+  right: -25px;
+  width: 70px;
+  border: solid 3px #59CEC8;
+  height: 70px;
+  text-align: center;
+  font-size: 2.25rem;
+  line-height: 1.8;
+  font-weight: 300;
+  background-color: #59CEC8;
+  color: #fff;
+  border-radius: 50px;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li:nth-child(1)::after {
+  content: "敷";
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li:nth-child(2)::after {
+  content: "搓";
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li:nth-child(3)::after {
+  content: "洗";
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li .mainContentIndexEffecLine {
+  height: 10px;
+  background-color: #ABEFE7;
+  position: relative;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li .mainContentIndexEffecLine .mainContentIndexEffecLineIntro {
+  position: absolute;
+  width: 120px;
+  left: -40px;
+  top: -40px;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li p {
+  width: 80%;
+  display: block;
+  margin: 30px auto;
+  font-size: 1.2rem;
+  line-height: 1.8;
+  letter-spacing: .5px;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li h2 {
+  margin: 30px auto;
+  text-align: center;
+  position: relative;
+  font-size: 1.5rem;
+}
+
+.main .mainContent .mainContentIndex .mainContentIndexEffect li h2::after {
+  content: "";
+  position: absolute;
+  width: 80%;
+  background-color: #FFF9D5;
+  height: 10px;
+  left: 50%;
+  bottom: -10px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect {
+  margin: auto;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li {
+  position: relative;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .fa {
+  color: #000;
+  margin-left: 5px;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferEffectText {
+  text-align: center;
+  background: unset;
+  display: block;
+  font-size: 1.5rem;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn1 {
+  background-color: #59CEC8;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: auto;
+  width: 150px;
+  margin-top: 20px;
+  letter-spacing: 3px;
+  display: block;
+  text-align: center;
+  line-height: 2.5;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn1:hover {
+  -webkit-filter: saturate(200%);
+          filter: saturate(200%);
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn2 {
+  color: #E51C24;
+  display: block;
+  font-size: 1.1rem;
+  line-height: 2.5;
+  text-align: center;
+  position: relative;
+  -webkit-transition: .5s;
+  transition: .5s;
+  cursor: pointer;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn2:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn2:hover::before {
+  position: absolute;
+  content: "《45天退費保證》\A因為對產品有信心所以提供退費保證！\A 若您在使用45天後能無感受到任何變化，我們將提供全額退款。\A ■退款適用對象：\A 初次訂購定期方案的顧客\A ■退款規定：\A ・退款申請請在第二次定期寄送日的10天前以電話諮詢。超過時間將無法退款。\A ・退款最多以定期一個月1, 340元為上限。\A ・退貨時請一併將同裝的袋子、箱子、同捆物一同退回。如有缺少恕不退貨。\A ・退貨時的運費將由顧客自行負擔。";
+  text-align: left;
+  border: solid 1px #59C6C0;
+  bottom: -60%;
+  width: 100%;
+  max-width: 500px;
+  bottom: 80%;
+  left: 0;
+  min-width: 250px;
+  white-space: pre-wrap;
+  line-height: 2;
+  color: #002642;
+  background-color: #fff;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn3 {
+  color: #E51C24;
+  display: block;
+  font-size: 1.1rem;
+  position: relative;
+  text-align: center;
+  cursor: pointer;
+}
+
+/*.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn3:hover {
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .mainContent .mainContentBgOffer .mainContentOfferEffect li .mainContentOfferBtn3:hover::before {
+  position: absolute;
+  content: "退費\A保證";
+  white-space: pre;
+  border: solid 1px #59C6C0;
+  bottom: -60%;
+  width: 200px;
+  line-height: 2;
+  color: #002642;
+  background-color: #fff;
+}*/
+
+.main .mainContent .mainContentKol .mainContentKolBox img {
+  width: 100%;
+  margin: auto;
+  display: block;
+}
+
+.main .mainContent .mainContentBanner {
+  width: 100%;
+  height: 450px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .mainContent .mainContentBanner.bgImg1 {
+  background-image: url("../images/seibun_bg01.jpg");
+}
+
+.main .mainContent .mainContentBanner.bgImg2 {
+  background-image: url("../images/seibun_bg02.jpg");
+}
+
+.main .mainContent .mainContentBanner.bgImg3 {
+  background-image: url("../images/seibun_bg03.jpg");
+}
+
+.main .mainContent .mainContentBanner .mainContentBannerH2 {
+  font-size: 2.8rem;
+  letter-spacing: 5px;
+  font-weight: 500;
+  color: #002642;
+  text-shadow: 0 0 0.2em #fff, 0 0 0.2em #fff, 0 0 0.2em #fff, 0 0 0.2em #fff, 0 0 0.2em #fff, 0 0 0.2em #fff;
+}
+
+.main .mainContent .mainContentBanner .mainContentBannerText1 {
+  font-size: 1.5rem;
+  color: #002642;
+  text-align: right;
+  position: relative;
+}
+
+.main .mainContent .mainContentBanner .mainContentBannerText1:before {
+  content: "";
+  position: absolute;
+  width: 55%;
+  left: 0;
+  top: 50%;
+  border-bottom: solid 1px #002642;
+}
+
+.main .mainContent .mainContentBanner .mainContentBannerText2 {
+  padding-top: 5px;
+  font-size: 1.2rem;
+  color: #002642;
+}
+
+.main .mainContent .mainContentBanner .mainContentBannerMore {
+  border-radius: 10px;
+  background-color: #fff;
+  width: 130px;
+  padding: 10px 15px;
+  margin-top: 50px;
+  cursor: pointer;
+  display: block;
+  text-align: center;
+  font-weight: 500;
+  letter-spacing: 2px;
+  margin-top: 50px;
+  font-size: 1.5rem;
+  -webkit-box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.29);
+  color: #002642;
+}
+
+.main .mainContent .mainContentElement {
+  display: none;
+  font-size: 1.1rem;
+}
+
+.main .mainContent .mainContentElement .mainContentElementText {
+  color: #002642;
+  padding-bottom: 50px;
+  font-size: 1.2rem;
+}
+
+.main .mainContent .mainContentElement .mainContentElementBox {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: auto;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.main .mainContent .mainContentElement .mainContentElementBox .mainContentElementBox18 {
+  text-align: center;
+  border-radius: 15px;
+  -webkit-box-shadow: 16px 15px 1px -2px #ABEFE7;
+          box-shadow: 16px 15px 1px -2px #ABEFE7;
+  background-origin: border-box;
+  border: solid 3px #59CEC8;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .mainContent .mainContentElement .mainContentElementBox .mainContentElementBox18 p {
+  width: 100%;
+  height: 100px;
+  font-size: 1.1rem;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main .mainContent .mainContentElement .mainContentElementBox .mainContentElementBox18 p:hover {
+  position: relative;
+  text-indent: -99999px;
+  padding: 0 30px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 15px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#FFF9D5), to(#ffffff));
+  background: linear-gradient(#FFF9D5, #ffffff);
+}
+
+.main .mainContent .mainContentElement .mainContentElementBox .mainContentElementBox18 p:hover::after {
+  position: absolute;
+  content: attr(data-tooltip);
+  left: 50%;
+  line-height: 2.1;
+  white-space: pre;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  top: 50%;
+  border-radius: 15px;
+  color: #002642;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  z-index: 2;
+  text-indent: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductTitle {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductTitle .mainContentText45 {
+  text-align: center;
+  line-height: 2;
+  font-size: 1.1rem;
+  background-color: #E66352;
+  color: #fff;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecLeft {
+  color: #002642;
+  font-size: 1.2rem;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecLeft .mainContentProductEffecLeftG {
+  border: solid 1px #002642;
+  padding: 5px 15px;
+  text-align: center;
+  width: 80%;
+  margin: 0 auto 20px;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight {
+  font-size: 1.2rem;
+  line-height: 1.8;
+  color: #002642;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight ul {
+  margin-bottom: 30px;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn {
+  width: 100%;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop {
+  cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy {
+  width: 50%;
+  text-align: center;
+  -webkit-transition: .5s;
+  transition: .5s;
+  height: 70px;
+  font-size: 1.5rem;
+  line-height: 35px;
+  color: #fff;
+  background-color: #59CEC8;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy:nth-child(1) {
+  margin-right: 5px;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy:nth-child(2) {
+  margin-left: 5px;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy:hover {
+  opacity: .8;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnDown {
+  height: 70px;
+  color: #fff;
+  line-height: 2.5;
+  height: 70px;
+  font-size: 1.8rem;
+  cursor: pointer;
+  margin-top: 10px;
+  text-align: center;
+  background-color: #E66352;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnDown:hover {
+  opacity: .8;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox {
+  text-align: center;
+  margin: auto;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .elementText {
+  margin: 100px auto;
+  width: 90%;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxArrow {
+  border: solid 1px #002642;
+  margin: auto;
+  font-size: 1.5rem;
+  border-radius: 15px;
+  color: #002642;
+  line-height: 2;
+  position: relative;
+  -webkit-box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.29);
+          box-shadow: 3px 5px 5px 2px rgba(0, 0, 0, 0.29);
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxArrow::before {
+  position: absolute;
+  content: "";
+  border-top: 20px solid #002642;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  bottom: -20px;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxArrow::after {
+  position: absolute;
+  content: "";
+  border-top: 20px solid #fff;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: none;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  left: 50%;
+  bottom: -18px;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxCheck {
+  text-align: center;
+  -webkit-transition: all 1s;
+  transition: all 1s;
+  -webkit-transform: translateY(20px);
+          transform: translateY(20px);
+  opacity: 0;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxCheck div {
+  background: url("../images/checkmark.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  color: #002642;
+  font-size: 1.5rem;
+  font-weight: 500;
+  background-position: 0 100%;
+  margin: 50px auto;
+  opacity: 1;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxCheck div:nth-child(3) {
+  padding-left: 19px;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .video-container {
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  margin: 10px auto 100px;
+  overflow: hidden;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .video-container video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main .mainContent .mainContentTv .mainContentTvBox .mainContentTvText {
+  color: #002642;
+  font-size: 1.2rem;
+  margin: 50px auto 100px;
+}
+
+.main .mainContent .mainContentExp {
+  margin: auto;
+}
+
+.main .mainContent .mainContentExp .mainContentExpBox {
+  margin: 50px auto;
+}
+
+.main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxLeftH3 {
+  font-size: 1.5rem;
+  width: 220px;
+  border: solid 2px #ABEFE7;
+  text-indent: -20px;
+  color: #002642;
+  padding-top: 20px;
+  vertical-align: bottom;
+  margin: 20px 20px 50px 20px;
+  line-height: 5px;
+}
+
+.main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxLeft p {
+  color: #002642;
+  font-size: 1.2rem;
+  position: relative;
+}
+.main .mainContent .mainContentExp .mainContentExpBox p{
+  color: #002642;
+  font-size: 1.2rem;
+}
+.main .mainContent .mainContentExp .mainContentExpBox p .mainContentExpBoxLeftColor {
+  content: "";
+  background-image: -webkit-gradient(linear, left top, left bottom, from(transparent), color-stop(40%, transparent), color-stop(40%, #FFF9D5), color-stop(90%, #FFF9D5), color-stop(90%, transparent), to(transparent));
+  background-image: linear-gradient(transparent 0%, transparent 40%, #FFF9D5 40%, #FFF9D5 90%, transparent 90%, transparent);
+  display: inline;
+}
+
+.main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight {
+  position: relative;
+}
+
+.main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight::before {
+  content: "";
+  position: absolute;
+  background-color: #DFF9F6;
+  width: 290px;
+  height: 400px;
+  right: -50px;
+  z-index: -1;
+  bottom: -50px;
+}
+
+.main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight .video-wrapper {
+  position: relative;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight .video-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.main .mainContent .mainContentBgMd {
+  margin: auto;
+  background-image: url("../images/voice_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-size: 100% 100%;
+}
+
+.main .mainContent .mainContentBgMd .mainContentMd .mainContentMdPeople {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 50px auto;
+}
+
+.main .mainContent .mainContentBgMd .mainContentMd .mainContentMdPeople img {
+  width: 143px;
+  height: 143px;
+  margin-right: 20px;
+}
+
+.main .mainContent .mainContentBgMd .mainContentMd .mainContentMdPeople .mainContentMdPeopleLine h3.mainContentMdPeopleLineH3 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+}
+
+.main .mainContent .mainContentBgMd .mainContentMd .mainContentMdPeople .mainContentMdPeopleLine p {
+  font-size: 1.2rem;
+}
+
+.main .mainContent .mainContentQa {
+  margin: 100px auto;
+}
+
+.main .mainContent .mainContentTable .divTable {
+  display: table;
+  width: 100%;
+  text-align: center;
+  border: solid 2px #AAF0E6;
+  box-sizing: border-box;
+  font-size: 1.2rem;
+  color: #002642;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody {
+  display: table-row-group;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow {
+  display: table-row;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow .divTableCell {
+  display: table-cell;
+  position: relative;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(3) {
+  border-left: 3px #aaf0e6 dotted;
+  border-right: 3px #aaf0e6 dotted;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow:nth-child(even) {
+  background-color: #DFF9F6;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow:nth-child(1) {
+  line-height: 4;
+  position: relative;
+  height: 100px;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow:nth-child(1) .divTableCell img {
+  position: absolute;
+  left: 0%;
+  top: 110%;
+  -webkit-transform: translateY(-110%);
+          transform: translateY(-110%);
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow:nth-child(5) {
+  line-height: 5.5;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow:nth-child(5) .divTableCell a {
+  background-color: #59C6C0;
+  display: block;
+  margin: auto;
+  cursor: pointer;
+  color: #fff;
+  -webkit-transition: .5s;
+  transition: .5s;
+}
+
+.main .mainContent .mainContentTable .divTable .divTableBody .divTableRow:nth-child(5) .divTableCell a:hover {
+  -webkit-filter: saturate(200%);
+          filter: saturate(200%);
+}
+
+.main .mainContent .mainContentPrivacy {
+  font-size: 1.2rem;
+  color: #002642;
+}
+
+.main .mainContent .mainContentPrivacy h2 {
+  line-height: 3;
+  font-size: 2.15385rem;
+}
+
+.main .mainContent .mainContentPrivacy h3 {
+  font-size: 1.5rem;
+  line-height: 3;
+}
+.main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn a{
+      color:#fff;
+}
+/* ------------------------------------ 
+    MIX WIDTH 1025
+------------------------------------ */
+@media (min-width: 1025px) {
+  .main {
+    /* ALL PAGE - MAIN CONTENT
+        ------------------------------------ */
+  }
+  .main .mainContent {
+    /* ./ ELEMENT PAGE - BANNER */
+    /* ./ ELEMENT PAGE - PRODUCT */
+  }
+  .main .mainContent .mainContentBanner.bgImg1, .main .mainContent .mainContentBanner.bgImg3 {
+    background-position: 100%, 75%;
+  }
+  .main .mainContent .mainContentBanner.bgImg2 {
+    background-position: 75%, 100%;
+  }
+  .main .mainContent .mainContentBanner .mainContentElementRight {
+    width: 35%;
+    margin-left: 25%;
+  }
+  .main .mainContent .mainContentBanner .mainContentElementRight .mainHeaderRightText {
+    font-size: 1.95rem;
+    left: -30%;
+    padding-left: 30%;
+    width: 500%;
+  }
+  .main .mainContent .mainContentBanner .mainContentElementLeft {
+    width: 35%;
+    margin-right: 25%;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .elementText {
+    margin-left: 45%;
+    width: 380px;
+    display: inline-block;
+  }
+}
+
+/* ------------------------------------ 
+    MIN WIDTH 768 AND MAX WIDTH 1024
+------------------------------------ */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .main {
+    /* ALL PAGE - MAIN CONTENT
+        ------------------------------------ */
+  }
+  .main .mainContent {
+    /* ./ ELEMENT PAGE - BANNER */
+    /* ./ ELEMENT PAGE - PRODUCT */
+  }
+  .main .mainContent .mainContentBanner .mainContentElementRight {
+    width: 60%;
+    margin-left: 25%;
+  }
+  .main .mainContent .mainContentBanner .mainContentElementLeft {
+    width: 60%;
+    margin-right: 25%;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .elementText {
+    display: inline-block;
+  }
+}
+
+/* ------------------------------------ 
+    MIX WIDTH 767
+------------------------------------ */
+@media (min-width: 768px) {
+  .main {
+    /* H1 H2 ELEMENT TEXT
+        ------------------------------------ */
+    /* INDEX PAGE - MAIN HEADER
+        ------------------------------------ */
+    /* ALL PAGE - MAIN CONTENT
+        ------------------------------------ */
+  }
+  .main h1.elementText,
+  .main h2.elementText {
+    width: 400px;
+  }
+  .main .mainHeaderBg {
+    padding: 5% 0;
+  }
+  .main .mainHeaderBg .mainHeader {
+    width: 100%;
+    height: 500px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderLeft {
+    padding-right: 60px;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightLogo {
+    width: 60%;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight h1.mainHeaderRightH1 {
+    line-height: 2;
+    letter-spacing: 5px;
+    font-size: 2.4rem;
+    font-weight: bold;
+    color: #002642;
+    margin: 10px auto;
+    font-weight: 600;
+    letter-spacing: 8px;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightText {
+    font-size: 1.8rem;
+    color: #002642;
+    letter-spacing: 4px;
+    font-weight: 600;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightMore {
+    width: 240px;
+    line-height: 2.5;
+    margin-top: 25%;
+  }
+  .main .mainContent {
+    /* ./ INDEX PAGE - INDEX */
+    /* ./ INDEX PAGE - OFFER */
+    /* ./ INDEX PAGE - KOL */
+    /* ./ ELEMENT PAGE - ELENENT */
+    /* ./ ELEMENT PAGE - PRODUCT */
+    /* ./ ELEMENT PAGE - TV */
+    /* ./ EXPERIENCE PAGE - EXP */
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexTopBr {
+    display: none;
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexTopBrSp {
+    display: none;
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexTop {
+    width: 60%;
+    font-size: 1.32rem;
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexTop .mainContentIndexTopText1 {
+    font-size: 1.65rem;
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexTop .mainContentIndexTopText2 {
+    font-size: 1.65rem;
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexEffect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexEffect li {
+    width: calc(33.33333% - 3em);
+    margin: 0 3em 0 0;
+  }
+  .main .mainContent .mainContentBgOffer {
+    background: url("../images/offer_s_bg.jpg");
+    background-position: 100% 55%;
+    background-repeat: no-repeat;
+    background-size: 100% 30%;
+  }
+  .main .mainContent .mainContentBgOffer .mainContentOfferEffect {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main .mainContent .mainContentBgOffer .mainContentOfferEffect li {
+    width: calc(33.33333% - 3em);
+    margin: 0 3em 0 0;
+  }
+  .main .mainContent .mainContentBgOffer .mainContentOfferEffect li:nth-child(2)::before {
+    content: "";
+    position: absolute;
+    border-left: 4px dotted #59CEC8;
+    height: 65%;
+    top: 1%;
+    left: -7.5%;
+    -webkit-transform: translateY(-1%);
+            transform: translateY(-1%);
+  }
+  .main .mainContent .mainContentBgOffer .mainContentOfferEffect li:nth-child(2)::after {
+    content: "";
+    position: absolute;
+    border-left: 4px dotted #59CEC8;
+    height: 65%;
+    top: 1%;
+    right: -7.5%;
+    -webkit-transform: translateY(-1%);
+            transform: translateY(-1%);
+  }
+  .main .mainContent .mainContentKol .mainContentKolBox img {
+    width: 80%;
+    margin: auto;
+    display: block;
+  }
+  .main .mainContent .mainContentElement .mainContentElementBox18 {
+    width: calc(33.33333% - 2em);
+    margin: 1.5em 1.5em 0 0;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .elementText .br {
+    display: none;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .mainContentText45 {
+    height: 80px;
+    width: 80px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-left: 20px;
+    padding: 10px 10px;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .mainContentText45 .br {
+    display: block;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 100%;
+    margin: auto;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecLeft {
+    color: #002642;
+    font-size: 1.2rem;
+    width: 37%;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding-left: 100px;
+    color: #002642;
+    width: 60%;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight ul {
+    margin-bottom: 30px;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn {
+    width: 100%;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop {
+    cursor: pointer;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy {
+    width: 50%;
+    text-align: center;
+    -webkit-transition: .5s;
+    transition: .5s;
+    height: 70px;
+    font-size: 1.5rem;
+    line-height: 35px;
+    color: #fff;
+    background-color: #59CEC8;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy:nth-child(1) {
+    margin-right: 5px;
+  }
+
+
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy:nth-child(2) {
+    margin-left: 5px;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnTop .mainContentProductEffecRightBtnTopBuy:hover {
+    opacity: .8;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnDown {
+    height: 70px;
+    color: #fff;
+    line-height: 2.5;
+    height: 70px;
+    font-size: 1.8rem;
+    cursor: pointer;
+    margin-top: 10px;
+    text-align: center;
+    background-color: #E66352;
+    -webkit-transition: .5s;
+    transition: .5s;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec .mainContentProductEffecRight .mainContentProductEffecRightBtn .mainContentProductEffecRightBtnDown:hover {
+    opacity: .8;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox {
+    text-align: center;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxArrow {
+    width: 40%;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxCheck {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    width: 75%;
+    margin: auto;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxCheck div {
+    width: 33.33%;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox .elementText {
+      margin: 100px auto;
+      width: 60%;
+  }
+  .main .mainContent .mainContentExp {
+    margin: auto;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 50px auto;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxLeft {
+    width: 50%;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight {
+    overflow: hidden;
+    padding: 20px 50px 50px 50px;
+    width: 50%;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxLeft{
+    display:block;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight{
+    width:50%;
+  }  
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight .mainContentExpBoxRightText{
+    display:none;
+  }
+}
+
+/* ------------------------------------ 
+    MAX WIDTH 767
+------------------------------------ */
+@media (max-width: 767px) {
+  .main {
+    /* GRIDE WIDTH
+        ------------------------------------ */
+    /* INDEX PAGE - MAIN HEADER
+    ------------------------------------ */
+    /* ALL PAGE - MAIN CONTENT
+        ------------------------------------ */
+  }
+  .main .indexGridWidth {
+    padding: 50px 0;
+  }
+  .main .mainHeaderBg {
+    overflow: hidden;
+    display: block;
+    padding: 15% 0;
+  }
+  .main .mainHeaderBg .mainHeader {
+    height: 300px;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight h1.mainHeaderRightH1 {
+    line-height: 1.2;
+    font-size: 1.33333rem;
+    margin: 10px auto;
+    font-weight: 600;
+    letter-spacing: 1.1px;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightText {
+    font-family: 'Noto Serif TC', 'Microsoft JhengHei', sans-serif;
+    font-size: 1.2rem;
+    color: #002642;
+    font-weight: 600;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightMore {
+    line-height: 2;
+    width: 180px;
+    margin-top: 30%;
+  }
+  .main .mainContent {
+    /* ./ INDEX PAGE - INDEX */
+    /* ./ INDEX PAGE - OFFER */
+    /* ./ ELEMENT PAGE - BANNER */
+    /* ./ ELEMENT PAGE - ELEMENT */
+    /* ./ ELEMENT PAGE - PRODUCT */
+    /* ./ ELEMENT PAGE - TV */
+    /* ./ ELEMENT PAGE - EXP */
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexTopBr {
+    display: block;
+  }
+  .main .mainContent .mainContentIndex .mainContentIndexEffect li {
+    width: 95%;
+    margin: 50px auto;
+  }
+  .main .mainContent .mainContentBgOffer .mainContentOfferEffect li {
+    background: url("../images/offer_s_bg.jpg");
+    background-size: 100% 45%;
+    background-repeat: no-repeat;
+    width: 100%;
+    margin: 50px auto;
+    background-position: 100% 30%;
+  }
+  .main .mainContent .mainContentBanner.bgImg1, .main .mainContent .mainContentBanner.bgImg3 {
+    background-position: 100%, 50%;
+  }
+  .main .mainContent .mainContentBanner.bgImg2 {
+    background-position: 50%, 100%;
+  }
+  .main .mainContent .mainContentBanner .mainContentElementRight {
+    width: 90%;
+    margin-left: 0%;
+  }
+  .main .mainContent .mainContentBanner .mainContentElementLeft {
+    width: 90%;
+    margin-right: unset;
+  }
+  .main .mainContent .mainContentElement .mainContentElementBox18 {
+    width: calc(50% - 2em);
+    margin: 1.5em 1.5em 0 0;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .elementText {
+    width: 80%;
+    line-height: 2;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .elementText .br {
+    display: block;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .mainContentText45 {
+    width: 80%;
+    border-radius: 0;
+    display: block;
+    margin: 0 auto 50px;
+    display: block;
+    background-color: #E66352;
+    color: #fff;
+    padding: 10px 10px;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductTitle .mainContentText45 .br {
+    display: none;
+  }
+  .main .mainContent .mainContentProduct .mainContentProductEffec {
+    display: block;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox {
+    text-align: center;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxCheck {
+    display: block;
+  }
+  .main .mainContent .mainContentTv .mainContentTvBox .mainContentTvBoxCheck div {
+    width: 60%;
+  }
+  .main .mainContent .mainContentExp {
+    width: 90%;
+    margin: auto;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox {
+    display: block;
+    margin: 50px auto;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxLeft {
+    width: 100%;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxLeft p {
+    margin-bottom: 20px;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight {
+    width: 100%;
+    overflow: hidden;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxLeft{
+    display:none;
+  }
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight{
+    width:100%;
+    
+  }  
+  .main .mainContent .mainContentExp .mainContentExpBox .mainContentExpBoxRight .mainContentExpBoxRightText{
+    display:block;
+    z-index:1;
+    margin-bottom: 20px;
+  }
+}
+
+/* ------------------------------------ 
+    MIN WIDTH 601
+------------------------------------ */
+@media (min-width: 601px) {
+  /* ./ ELEMENT PAGE - TABLE */
+  .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(1) {
+    display: block;
+    border-right: 2px solid #AAF0E6;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(2) .br, .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(3) .br, .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(4) .br {
+    display: none;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(2), .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3), .mainContentTable .divTable .divTableBody .divTableRow:nth-child(4) {
+    line-height: 3.5;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3) .divTableCell span:nth-child(1) {
+    display: block;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3) .divTableCell span:nth-child(2) {
+    display: none;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(5) {
+    line-height: 5.5;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(5) .divTableCell a {
+    width: 70%;
+    display: block;
+    margin: auto;
+    line-height: 2.5;
+    font-size: 1.5rem;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(2) .divTableCell:nth-child(3) span {
+    color: #E66352;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(2) .divTableCell:nth-child(3)::after {
+    position: absolute;
+    content: url("../images/crown.png");
+    top: 10%;
+    right: 10%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3) .divTableCell:nth-child(3)::after {
+    top: 10%;
+    right: 30%;
+    -webkit-transform: translate(-30%, -50%);
+            transform: translate(-30%, -50%);
+    position: absolute;
+    content: url("../images/crown.png");
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(4) .divTableCell:nth-child(3)::after {
+    top: 10%;
+    right: 25%;
+    -webkit-transform: translate(-25%, -50%);
+            transform: translate(-25%, -50%);
+    position: absolute;
+    content: url("../images/crown.png");
+  }
+
+}
+
+/* ------------------------------------ 
+    MAX WIDTH 600
+------------------------------------ */
+@media (max-width: 600px) {
+  /* ./ ELEMENT PAGE - TABLE */
+  .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(1) {
+    display: none !important;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(2) .br, .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(3) .br, .mainContentTable .divTable .divTableBody .divTableRow .divTableCell:nth-child(4) .br {
+    display: block;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(2), .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3), .mainContentTable .divTable .divTableBody .divTableRow:nth-child(4) {
+    line-height: 2;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3) .divTableCell span:nth-child(1) {
+    display: none;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3) .divTableCell span:nth-child(2) {
+    display: block;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(2) .divTableCell:nth-child(3) span {
+    color: #E66352;
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(2) .divTableCell:nth-child(3)::after {
+    position: absolute;
+    content: url("../images/crown.png");
+    top: 0%;
+    right: 0%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(3) .divTableCell:nth-child(3)::after {
+    top: 5%;
+    right: 0%;
+    -webkit-transform: translate(-30%, -50%);
+            transform: translate(-30%, -50%);
+    position: absolute;
+    content: url("../images/crown.png");
+  }
+  .mainContentTable .divTable .divTableBody .divTableRow:nth-child(4) .divTableCell:nth-child(3)::after {
+    top: 10%;
+    right: 0%;
+    -webkit-transform: translate(-25%, -50%);
+            transform: translate(-25%, -50%);
+    position: absolute;
+    content: url("../images/crown.png");
+  }
+}
+
+/* ------------------------------------ 
+    MIN WIDTH 414
+------------------------------------ */
+@media (min-width: 415px) {
+  /* H1 H2 ELEMENT TEXT
+    ------------------------------------ */
+  h1.elementText,
+  h2.elementText {
+    line-height: 3;
+    -webkit-box-shadow: 16px 15px 1px -2px #ABEFE7;
+            box-shadow: 16px 15px 1px -2px #ABEFE7;
+  }
+  /* ./ ELEMENT PAGE - TV */
+  .mainContentTv .mainContentTvBox .elementText .br {
+    display: none;
+  }
+}
+
+/* ------------------------------------ 
+    MAX WIDTH 414
+------------------------------------ */
+@media (max-width: 414px) {
+  /* H1 H2 ELEMENT TEXT
+    ------------------------------------ */
+  h1.elementText,
+  h2.elementText {
+    width: 80%;
+    line-height: 2;
+    -webkit-box-shadow: 10px 10px 1px -2px #ABEFE7;
+            box-shadow: 10px 10px 1px -2px #ABEFE7;
+  }
+  /* ./ ELEMENT PAGE - PRODUCT */
+  .mainContentProduct .mainContentProductEffec .mainContentProductEffecLeft img {
+    display: block;
+    margin: auto;
+  }
+}
+
+/* ------------------------------------ 
+    MAX WIDTH 360
+------------------------------------ */
+@media (max-width: 360px) {
+  .main .mainHeaderBg .mainHeader {
+    height: 200px;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight h1.mainHeaderRightH1 {
+    line-height: 1.2;
+    font-size: 0.95238rem;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightText {
+    font-size: 0.61111rem;
+  }
+  .main .mainHeaderBg .mainHeader .mainHeaderRight .mainHeaderRightMore {
+    line-height: 2;
+    width: 120px;
+    font-size: 1rem;
+  }
+}

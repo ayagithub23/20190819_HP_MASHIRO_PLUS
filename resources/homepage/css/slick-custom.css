@@ -1,0 +1,46 @@
+@charset 'utf-8';
+.slick-dotted.slick-slider {
+    margin-bottom: 10px;
+}
+.slickBox{
+    overflow: hidden;
+}
+.slick-slide img {
+    display: block;
+    width: 100%;
+}
+.slick-dots li button:before {
+    font-size: 30px;
+    line-height: 20px;
+}
+.slick-dots {
+    bottom: 25px;
+}
+.next {
+    position: absolute;
+    z-index: 99;
+    top: 50%;
+    right: 1%;
+    cursor: pointer;
+    color: #fff;
+    transition: .5s;
+    transform: translateY(-50%);
+    opacity: .7;
+}
+
+.prev {
+    position: absolute;
+    z-index: 99;
+    color: #fff;
+    top: 50%;
+    left: 1%;
+    cursor: pointer;
+    transition: .5s;
+    transform: translateY(-50%);
+    opacity: .7;
+}
+
+.next:hover,
+.prev:hover {
+    opacity: 1;
+}
